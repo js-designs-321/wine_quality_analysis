@@ -1,16 +1,51 @@
-# wine_quality_analysis
+# Wine Quality Analysis
 
-Introduction:
-The Wine Quality Analysis project aims to analyze the chemical composition of different wines and predict their quality using machine learning. The project involves data analysis and visualization to gain insights into the chemical properties of the wines, and then building a machine learning model to predict the quality of wine based on these properties.
+This project analyzes a dataset of red wine properties to determine the relationship between these properties and the quality of wine. The data is then used to create machine learning models to classify wine as either 'good' or 'bad' quality.
 
-Data Preprocessing:
-The wine quality dataset was obtained from a GitHub repository and loaded using the Pandas library. The dataset contained 1599 rows and 12 columns. The quality column was transformed into a binary column, where quality ratings from 2 to 6 were considered as "bad" and ratings from 7 to 8 were considered as "good".
+## Requirements
 
-Data Analysis and Visualization:
-Data visualization was done using the Seaborn and Matplotlib libraries. The visualization results showed that the fixed acidity and residual sugar did not give any specification to classify the quality of wine. However, the volatile acidity and chloride levels decreased as the quality of wine increased. Citric acid, sulphates, and alcohol levels increased with the quality of wine.
+- pandas
+- seaborn
+- matplotlib
+- scikit-learn
 
-Model Building:
-The machine learning models used for the project were Random Forest, Stochastic Gradient, and Support Vector Classifier. The Random Forest model gave an accuracy of 89%, Stochastic Gradient gave an accuracy of 85%, and Support Vector Classifier gave an accuracy of 88%. Grid Search CV was used to optimize the parameters of Support Vector Classifier, and the accuracy improved from 88% to 90%. Cross-validation was also used to improve the accuracy of the Random Forest model from 89% to 91%.
+## Data
 
-Conclusion:
-The Wine Quality Analysis project provided insights into the chemical properties of wine and helped build machine learning models to predict the quality of wine based on these properties. The project achieved an accuracy of 91% using the Random Forest model and demonstrated the importance of data analysis and visualization in machine learning projects.
+The dataset used in this project is the `winequality-red.csv` file. It contains the following columns:
+
+- fixed acidity
+- volatile acidity
+- citric acid
+- residual sugar
+- chlorides
+- free sulfur dioxide
+- total sulfur dioxide
+- density
+- pH
+- sulphates
+- alcohol
+- quality (score between 0 and 10)
+
+## Methodology
+
+1. Data cleaning and exploration
+2. Data visualization to determine linear relationship between features and quality
+3. Encoding the quality column as binary 'good' or 'bad'
+4. Splitting data into training and testing sets
+5. Scaling data using StandardScaler
+6. Training machine learning models: RandomForestClassifier, SGDClassifier, and SVC
+7. Evaluating models using classification report
+8. Improving model performance using GridSearchCV to tune hyperparameters
+9. Evaluating model performance using cross-validation
+
+## Results
+
+- RandomForestClassifier achieved an accuracy of 89%
+- SGDClassifier achieved an accuracy of 85%
+- SVC achieved an accuracy of 88%
+- GridSearchCV was used to tune hyperparameters of SVC, resulting in an improved accuracy of 90%
+- RandomForestClassifier achieved an accuracy of 91% using cross-validation
+
+## Conclusion
+
+From the analysis, it can be concluded that the wine properties with the most significant linear relationship with quality are volatile acidity, citric acid, chlorides, sulphates, and alcohol. RandomForestClassifier performed the best out of the three machine learning models tested, with an accuracy of 89%. GridSearchCV was able to improve the performance of the SVC model from 88% to 90%. The accuracy of RandomForestClassifier was further improved to 91% using cross-validation.
