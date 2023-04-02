@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wine Tester</title>
+    <style>
+      body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        margin-top: 50px;
+        font-size: 48px;
+        color: #333;
+      }
+      form {
+        margin-top: 50px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px #888;
+      }
+      label {
+        font-size: 24px;
+        color: #333;
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        font-size: 24px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      button[type="submit"] {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 24px;
+        color: #fff;
+        background-color: #333;
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+      button[type="submit"]:hover {
+        background-color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Input Form</h1>
+    <form method="POST" action="/result">
+      
+      <label for="input1">Fixed Acidity</label>
+      <input type="text" id="fixedAcidity" name="fixedAcidity" required>
+      
+      <label for="input2">Volatile Acidity</label>
+      <input type="text" id="volatileAcidity" name="volatileAcidity" required>
+
+      <label for="input1">Citric Acid</label>
+      <input type="text" id="citricAcid" name="citricAcid" required>
+
+      <label for="input1">Residual Sugar</label>
+      <input type="text" id="residualSugar" name="residualSugar" required>
+
+      <label for="input1">Chlorides</label>
+      <input type="text" id="chlorides" name="chlorides" required>
+    
+      <label for="input1">Free Sulphur Dioxide</label>
+      <input type="text" id="freeSulphurDioxide" name="freeSulphurDioxide" required>
+    
+      <label for="input1">Total Sulphur Dioxide</label>
+      <input type="text" id="totalSulphurDioxide" name="totalSulphurDioxide" required>
+    
+      <label for="input1">Density</label>
+      <input type="text" id="density" name="density" required>
+    
+      <label for="input1">pH</label>
+      <input type="text" id="pH" name="pH" required>
+    
+      <label for="input1">Sulphates</label>
+      <input type="text" id="sulphates" name="sulphates" required>
+    
+      <label for="input1">Alcohol</label>
+      <input type="text" id="alcohol" name="alcohol" required>
+      
+      <button type="submit">Submit</button>
+    </form>
+</body>
+</html>    
