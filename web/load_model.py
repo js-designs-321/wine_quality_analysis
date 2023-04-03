@@ -19,4 +19,8 @@ while True:
     # Read a message from the Node.js program
     message = sys.stdin.readline()
     # Pass the message to the receive_input function
-    receive_input(message)
+    if not message:
+        continue
+    else:
+        receive_input(message)
+        break
